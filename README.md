@@ -37,12 +37,16 @@ $ npm install
 ```bash
 # development
 $ npm run start
+$ In this mode, the server needs to be restarted always to update changes made to the code in the server.
 
 # watch mode
 $ npm run start:dev
+$ This command will watch your files, automatically recompiling and reloading the server.
+$ In this mode, the server automatically restarts whenever there is any change in the server. 
 
 # production mode
 $ npm run start:prod
+
 ```
 
 ## Test
