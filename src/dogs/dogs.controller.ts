@@ -6,4 +6,16 @@ export class DogsController {
   getHome(): string {
     return 'This action returns all dogs';
   }
+
+  //Adds a get black sub-route to the dogs route
+  @Get('/black')
+  getBlack(): string {
+    return 'This action returns all black dogs';
+  }
+
+  //Adds a get white sub-route to the dogs route
+  @Get('white')
+  getWhite(): string {
+    return 'This action returns all white dogs';
+  }
 }
