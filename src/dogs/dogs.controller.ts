@@ -18,4 +18,10 @@ export class DogsController {
   getWhite(): string {
     return 'This action returns all white dogs';
   }
+
+  //Adds a get blue subroute to the dogs route
+  @Get('blue')
+  getBlue(): string {
+    return 'This action returns blue dogs';
+  }
 }
