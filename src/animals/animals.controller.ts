@@ -1,4 +1,6 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
+
+import { Request, Response } from 'express';
 
 @Controller('animals')
 export class AnimalsController {
@@ -24,5 +26,17 @@ export class AnimalsController {
   @Post('/black')
   postBlack(): string {
     return 'This action adds black animal(s) to the black animals sub-route';
+  }
+
+  //Adds a GET white sub-route for white to the animals route using express
+  @Get('/white')
+  getWhite(@Req() request: Request, @Res() response: Response) {
+    response.send('This action returns all white animals');
+  }
+
+  //Adds a POST white sub-route to the animals route using express
+  @Post('/white')
+  postWhite(@Req() request: Request, @Res() response: Response) {
+    console.log(request.body);
   }
 }
