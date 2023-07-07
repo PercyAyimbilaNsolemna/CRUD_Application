@@ -8,4 +8,10 @@ export class SheepController {
   finadAll(@Req() request: Request): string {
     return 'This action returns the root of the sheep controller';
   }
+
+  //Adds a sub-route to the root sheep route using typeScript
+  @Get('/black')
+  getBlack(@Req() request: Request): string {
+    return 'This action return all black sheep';
+  }
 }
