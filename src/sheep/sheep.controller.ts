@@ -13,6 +13,6 @@ export class SheepController {
   @Get('/black')
   getBlack(@Req() request: Request): string {
     console.log(request.body);
-    return 'This action returns all black sheep';
+    return 'This returns all black cats';
   }
 }
