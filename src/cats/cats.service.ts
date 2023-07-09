@@ -5,7 +5,13 @@ import { Cat } from './cats.interface';
 export class CatsService {
   private readonly cats: Cat[] = [];
 
+  //Creates new cat
   create(cat: Cat) {
     this.cats.push(cat);
+  }
+
+  //Returns all cats
+  finAll(): Cat[] {
+    return this.cats;
   }
 }
