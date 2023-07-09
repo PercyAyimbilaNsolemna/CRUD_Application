@@ -8,10 +8,11 @@ import { AnimalsController } from './animals/animals.controller';
 import { GoatController } from './goat/goat.controller';
 import { LionsController } from './lions/lions.controller';
 import { CatsService } from './cats/cats.service';
+import { DogsService } from './dogs/dogs.service';
 
 @Module({
   imports: [],
   controllers: [AppController, CatsController, DogsController, SheepController, AnimalsController, GoatController, LionsController],
-  providers: [AppService, CatsService],
+  providers: [AppService, CatsService, DogsService],
 })
 export class AppModule {}
