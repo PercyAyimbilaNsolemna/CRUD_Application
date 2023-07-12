@@ -9,9 +9,10 @@ import { GoatController } from './goat/goat.controller';
 import { LionsController } from './lions/lions.controller';
 import { CatsService } from './cats/cats.service';
 import { DogsService } from './dogs/dogs.service';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [],
+  imports: [MongooseModule.forRoot('mongodb://localhost/nest')],
   controllers: [AppController, CatsController, DogsController, SheepController, AnimalsController, GoatController, LionsController],
   providers: [AppService, CatsService, DogsService],
 })
