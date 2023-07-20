@@ -1,17 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Cat } from './cats.interface';
+import { InjectModel } from '@nestjs/mongoose';
+import { Cat } from './schemas/cat.schema';
+import { Model } from 'mongoose';
 
 @Injectable()
 export class CatsService {
-  private readonly cats: Cat[] = [];
-
-  //Creates new cat
-  create(cat: Cat) {
-    this.cats.push(cat);
-  }
-
-  //Returns all cats
-  finAll(): Cat[] {
-    return this.cats;
-  }
+  constructor(@InjectModel(Cat.name) private catModel: Model<Cat>) {}
 }

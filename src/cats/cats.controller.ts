@@ -15,6 +15,7 @@ export class CatsController {
   }
 
   //Creates a Get method retrieve all cats in the catsService/provider
+  /*
   @Get('/all')
   async getAllCats() {
     this.catsService.create({ name: 'Old', age: 2, breed: 'NEXT' });
@@ -47,4 +48,5 @@ export class CatsController {
     console.log(updateCatDto);
     return 'This page is meant to update the cat DTO';
   }
+  */
 }

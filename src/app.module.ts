@@ -10,9 +10,15 @@ import { LionsController } from './lions/lions.controller';
 import { CatsService } from './cats/cats.service';
 import { DogsService } from './dogs/dogs.service';
 import { MongooseModule } from '@nestjs/mongoose';
+import { CatsModule } from './cats/cats.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest')],
+  imports: [
+    MongooseModule.forRoot(
+      'mongodb+srv://percy:Ayimbila@cluster0.az84zbp.mongodb.net/nestDB?retryWrites=true&w=majorityy',
+    ),
+    CatsModule,
+  ],
   controllers: [AppController, CatsController, DogsController, SheepController, AnimalsController, GoatController, LionsController],
   providers: [AppService, CatsService, DogsService],
 })
