@@ -15,7 +15,7 @@ import { CatsModule } from './cats/cats.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://percy:Ayimbila@cluster0.az84zbp.mongodb.net/nestDB?retryWrites=true&w=majorityy',
+      'Enter your mongodb URI here',
     ),
     CatsModule,
   ],
